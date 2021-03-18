@@ -3,6 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import { useState } from "react";
 import theme from "../theme";
 import SearchIcon from '@material-ui/icons/Search';
+import JobCard from "../components/jobCard";
 
 
 const useStyles = makeStyles({
@@ -67,7 +68,7 @@ function Find(){
             <Grid container item>
                 <AppBar position="static" >
                 <Toolbar className={classes.searchToolbarStyle}>
-                    <form>
+                    <form action='get'>
                     <Grid container direction="column">
                         <Grid item xs={12}>
                             <Box mt={2} mb={1}>
@@ -120,15 +121,18 @@ function Find(){
                         </Grid>
                         <Grid> <Typography gutterBottom >Maximum distance (If set to 0 it will display all distances)</Typography></Grid>
                         <Box mb={2}>
-                        <Grid container  justify="space-between">
-                            <Grid item xs={12} sm={8}>
+                        <Grid container item direction="row" justify="space-evenly">
+                            <Grid item xs={12} sm={4}>
                                 
                                 <Slider color={"secondary"} valueLabelDisplay="auto" aria-label="pretto slider" defaultValue={0} />
 
                             </Grid>
+                            <Grid item xs={0} sm={4}>
+
+                            </Grid>
                             <Grid item xs={12} sm={4}>
 
-                                <Button endIcon={<SearchIcon/>}>Search</Button>
+                                <Button variant="contained" color="primary" endIcon={<SearchIcon/>}>Search</Button>
                             </Grid>
                             
                             
@@ -142,7 +146,8 @@ function Find(){
             </Grid>
 
             <Grid container item>
-                Tu idu rezultati
+                <JobCard/>
+
             </Grid>
 
         </Grid>
