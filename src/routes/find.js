@@ -1,4 +1,4 @@
-import { AppBar, makeStyles, Toolbar, TextField, Box, FormControl, InputLabel, Select, MenuItem, Typography, Slider, Tooltip, Button, IconButton, Icon  } from "@material-ui/core";
+import { AppBar, makeStyles, Toolbar, TextField, Box, FormControl, InputLabel, Select, MenuItem, Typography, Slider, Button } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 import { useState } from "react";
 import theme from "../theme";
@@ -33,7 +33,7 @@ function Find(){
     }
 
     function add2Weeks(){
-        var date = new Date;
+        var date = new Date();
         date.setDate(date.getDate() + 14);
 
         const ye = date.getFullYear();
@@ -119,7 +119,7 @@ function Find(){
                                 />
                             </Box>
                         </Grid>
-                        <Grid> <Typography gutterBottom >Maximum distance (If set to 0 it will display all distances)</Typography></Grid>
+                        <Grid> <Typography gutterBottom >Maximum distance in km (If set to 0 it will display all distances)</Typography></Grid>
                         <Box mb={2}>
                         <Grid container item direction="row" justify="space-evenly">
                             <Grid item xs={12} sm={4}>
@@ -145,9 +145,25 @@ function Find(){
                 </AppBar>
             </Grid>
 
-            <Grid container item>
-                <JobCard/>
+            <Grid container item xs={11} direction="column" alignContent="center" >
+            
+                <Box width="inherit" mt={2} borderBottom={1}>
+                    <JobCard/>
+                </Box>
 
+                <Box width="inherit" mt={2} borderBottom={1}>
+                    <JobCard/>
+                </Box>
+
+                <Box width="inherit" mt={2} borderBottom={1}>
+                    <JobCard/>
+                </Box>
+
+                <Box width="inherit" mt={2} borderBottom={1}>
+                    <JobCard/>
+                </Box>
+                
+                
             </Grid>
 
         </Grid>

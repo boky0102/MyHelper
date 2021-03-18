@@ -1,7 +1,7 @@
-import { AppBar, Avatar, Toolbar, Typography, Box } from "@material-ui/core";
-import AllInclusiveIcon from '@material-ui/icons/AllInclusive';
+import { AppBar, Avatar, Toolbar, Box } from "@material-ui/core";
+
 import {makeStyles} from "@material-ui/styles";
-import { PureComponent } from "react";
+
 import avat from "./static/picture.jpg";
 import theme from "./theme";
 import logo from "./static/drawing2.svg";
@@ -52,7 +52,7 @@ function Header(){
                         <Avatar src={avat} className={classes.avatarStyoes}></Avatar>
                     </Box>
                     <Box p={1} mx={2}>
-                        <img src={logo} className={classes.logoStyle}/>
+                        <img alt="helper logo" src={logo} className={classes.logoStyle}/>
                         
                     </Box>
                     <Box>
